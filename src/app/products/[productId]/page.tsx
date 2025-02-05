@@ -1,8 +1,17 @@
-export default async function ProductDetail({
-  params,
-}: {
+import type { Metadata } from 'next';
+
+type Props = {
   params: Promise<{ productId: string }>;
-}) {
-  const productId = (await params).productId;
+};
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const { productId } = await params;
+  return {
+    title: `Product ${productId}`,
+  };
+};
+
+export default async function ProductDetail({ params }: Props) {
+  const { productId } = await params;
   return <div>Product Detail {productId}</div>;
 }
