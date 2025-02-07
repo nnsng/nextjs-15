@@ -16,7 +16,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <div>
-      <h1>Auth Layout</h1>
+      <h1>Auth Template</h1>
 
       <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
 
