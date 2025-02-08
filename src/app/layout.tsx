@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { ErrorWrapper } from './error-wrapper';
 import './globals.css';
 
 const geistSans = Geist({
@@ -31,7 +32,9 @@ export default function RootLayout({
         <header className="bg-blue-600 p-5 text-white">
           <p>Header</p>
         </header>
-        {children}
+
+        <ErrorWrapper>{children}</ErrorWrapper>
+
         <footer className="bg-green-700 p-5 text-white">
           <p>Footer</p>
         </footer>
