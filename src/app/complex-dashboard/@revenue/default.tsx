@@ -1,5 +1,5 @@
 import { Card } from '@/components/card';
 
-export default async function Revenue() {
+export default async function RevenueDefault() {
   return <Card>Revenue</Card>;
 }
