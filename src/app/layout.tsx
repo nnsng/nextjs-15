@@ -34,7 +34,7 @@ export default function RootLayout({
         </header>
 
         {/* <ErrorWrapper> */}
-        {children}
+        <main className="py-4">{children}</main>
         {/* </ErrorWrapper> */}
 
         <footer className="bg-green-700 p-5 text-white">
