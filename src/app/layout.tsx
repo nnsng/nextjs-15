@@ -28,19 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header className="bg-blue-600 p-5 text-white">
-          <p>Header</p>
-        </header>
-
-        {/* <ErrorWrapper> */}
-        <main className="py-4">{children}</main>
-        {/* </ErrorWrapper> */}
-
-        <footer className="bg-green-700 p-5 text-white">
-          <p>Footer</p>
-        </footer>
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }
