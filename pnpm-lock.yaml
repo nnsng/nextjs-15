@@ -11,6 +11,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.0.3
         version: 4.0.3
+      client-only:
+        specifier: ^0.0.1
+        version: 0.0.1
       next:
         specifier: 15.1.6
         version: 15.1.6(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
