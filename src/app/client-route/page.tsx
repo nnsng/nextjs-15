@@ -1,7 +1,7 @@
 'use client';
 
-import ImageSlider from '@/components/ImageSlider';
-import { useTheme } from '@/components/ThemeProvider';
+import ImageSlider from '@/components/image-slider';
+import { useTheme } from '@/components/theme-provider';
 import { clientSideFunc } from '@/utils/client-utils';
 
 export default function ClientRoute() {

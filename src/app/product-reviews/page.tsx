@@ -1,5 +1,5 @@
-import Product from '@/components/Product';
-import Review from '@/components/Review';
+import Product from '@/components/product';
+import Review from '@/components/review';
 import { Suspense } from 'react';
 
 export default function ProductReviews() {
