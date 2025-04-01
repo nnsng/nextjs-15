@@ -1,3 +1,5 @@
+import { setTimeout } from 'timers/promises';
+
 type User = {
   id: number;
   name: string;
@@ -7,6 +9,7 @@ type User = {
 };
 
 export default async function UsersServer() {
+  await setTimeout(2000);
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
   const users: User[] = await response.json();
 
