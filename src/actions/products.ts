@@ -1,6 +1,7 @@
 'use server';
 
-import { addProduct, updateProduct } from '@/prisma-db';
+import { addProduct, deleteProduct, updateProduct } from '@/prisma-db';
+import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
 export type Errors = {
@@ -47,4 +48,9 @@ export const editProduct = async (id: number, prevState: FormState, formData: Fo
 
   await updateProduct(id, title, parseInt(price), description);
   redirect('/products-db');
+};
+
+export const removeProduct = async (id: number) => {
+  await deleteProduct(id);
+  revalidatePath('/products-db');
 };
