@@ -1,6 +1,7 @@
 'use client';
 
 import { removeProduct } from '@/actions/products';
+import Form from 'next/form';
 import Link from 'next/link';
 import { useOptimistic } from 'react';
 import type { Product } from './page';
@@ -29,11 +30,11 @@ export function ProductDetail({ products }: { products: Product[] }) {
             </h2>
             <p className="text-gray-500">Price: ${product.price}</p>
             {product.description && <p className="text-gray-500">{product.description}</p>}
-            <form action={removeProductById.bind(null, product.id)}>
+            <Form action={removeProductById.bind(null, product.id)}>
               <button type="submit" className="mt-1 rounded bg-red-500 px-2 py-1 text-white">
                 Delete
               </button>
-            </form>
+            </Form>
           </div>
         ))}
       </div>
