@@ -1,4 +1,4 @@
-import { SignInButton, SignOutButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignInButton, SignOutButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 export function Navigation() {
@@ -11,9 +11,14 @@ export function Navigation() {
           </div>
 
           <div className="flex items-center gap-4">
-            <SignInButton mode="modal" />
-            <Link href="user-profile">Profile</Link>
-            <SignOutButton />
+            <SignedOut>
+              <SignInButton mode="modal" />
+            </SignedOut>
+
+            <SignedIn>
+              <Link href="user-profile">Profile</Link>
+              <SignOutButton />
+            </SignedIn>
           </div>
         </div>
       </div>
