@@ -7,7 +7,9 @@ export function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-semibold text-[var(--foreground)]">Next.js App</h1>
+            <h1 className="text-xl font-semibold text-[var(--foreground)]">
+              <Link href="/">Next.js App</Link>
+            </h1>
           </div>
 
           <div className="flex items-center gap-4">
